@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    background: #a8a8a8; /* Gray background */
+    font-family: 'Raleway', sans-serif; /* Use Raleway font for all text */
+}
+
+.svg-button {
+    padding: 10px 20px;
+    border: 2px solid #0466d0; /* Dark blue border */
+    background-color: #00a2ff; /* Light blue background */
+    color: white; /* White text color */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    align-items: center; /* Center items vertically in the button */
+    gap: 10px; /* Space between SVG and text */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide overflow inside the button */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.svg-button svg {
+    width: 0; /* Hide SVG initially */
+    height: 0;
+    transition: width 0.3s, height 0.3s, fill 0.3s; /* Smooth transitions for SVG changes */
+    fill: rgb(255, 255, 255); /* SVG is white when visible */
+}
+
+.svg-button:hover {
+    background-color: #027cff; /* Slightly darker blue on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Deeper shadow on hover */
+}
+
+.svg-button:hover svg {
+    width: 24px; /* Set SVG visible by adjusting width and height */
+    height: 24px;
+    transform: scale(1.1); /* Enlarge SVG */
+}
